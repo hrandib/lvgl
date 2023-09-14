@@ -55,16 +55,16 @@ LV_EXPORT_CONST_INT(LV_IMG_ZOOM_NONE);
     const lv_style_t var_name = {                                       \
         .sentinel = LV_STYLE_SENTINEL_VALUE,                            \
         .v_p = { .const_props = prop_array },                           \
-        .has_group = 0xFF,                                              \
         .prop1 = LV_STYLE_PROP_ANY,                                     \
+        .has_group = 0xFF,                                              \
         .prop_cnt = (sizeof(prop_array) / sizeof((prop_array)[0])),     \
     }
 #else
 #define LV_STYLE_CONST_INIT(var_name, prop_array)                       \
     const lv_style_t var_name = {                                       \
         .v_p = { .const_props = prop_array },                           \
-        .has_group = 0xFF,                                              \
         .prop1 = LV_STYLE_PROP_ANY,                                     \
+        .has_group = 0xFF,                                              \
         .prop_cnt = (sizeof(prop_array) / sizeof((prop_array)[0])),     \
     }
 #endif
